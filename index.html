@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <title>Freekick Simulation</title>
+</head>
+
+<body>
+    <div class="wrs-cnt-cont">
+        <div class="wrk-cont">
+            <div class="infs">
+                <p class="init-dist"><span>Initial Distance</span> <span class="dst-val-ip">25 <i>m</i></span></p>
+                <p class="fr-ngl"><span>Firing Angle</span><span class="ngl-val-ip">22<i>deg</i></span></p>
+                <p class="fr-vlc"><span>Firing Velocity</span><span class="vel-val-ip">20<i>m/sec.</i></span></p>
+                <p class="max-height"><span>Maximum Height</span><span class="mxh-val-op">3.5 <i>m</i></span></p>
+                <p class="fnl-height"><span>Hight</span><span class="fnh-val-op">2.5 <i>m</i></span></p>
+            </div>
+            <div class="goal"><img src="./images/147630.svg" alt=""></div>
+            <div class="grass"><img src="./images/grass.png" alt=""></div>
+            <div class="ball"><img src="./images/ball.png" alt=""></div>
+            <div class="dots-cont">
+            </div>
+        </div>
+        <div class="cnt-cont">
+            <div class="ins">
+                <p class="dist-frm-gl active" value="dist-frm-gl">
+                    <span class="material-symbols-outlined">align_justify_space_between</span>
+                    <span>Distance from goal</span>
+                </p>
+                <p class="firing-angle" value="firing-angle">
+                    <span class="material-symbols-outlined">rotate_90_degrees_ccw</span>
+                    <span>Firing Angle</span>
+                </p>
+                <p class="firing-velocity" value="firing-velocity">
+                    <span class="material-symbols-outlined">speed</span>
+                    <span>Firing Velocity</span>
+                </p>
+                <p class="start">
+                    <span class="material-symbols-outlined">flag</span>
+                    <span>Launch</span>
+                </p>
+            </div>
+            <div class="ins-rgs">
+            </div>
+        </div>
+    </div>
+    <div class="reset-window">
+        <div class="res-msg">
+            <span class="material-symbols-outlined cls-msg-btn">close</span>
+            <span class="material-symbols-outlined icn">restart_alt</span>
+            <p>if you want to try again, please click RESET button, in contrast, if you want to keep values, please
+                close
+                the window.</p>
+            <p class="res-btn">Reset</p>
+        </div>
+    </div>
+    <script src="./script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,405 @@
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;500;600;700;800;900;1000&family=Chivo+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;1,100;1,200;1,300;1,400;1,500&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Sofia+Sans+Semi+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Source+Code+Pro:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('./images/bgs/thumb-1920-881644.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+.wrs-cnt-cont {
+    position: absolute;
+    width: 650px;
+    height: 580px;
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(5px);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.wrk-cont {
+    background: rgba(0, 0, 0, 0.6);
+    height: 400px;
+    position: relative;
+    overflow: hidden;
+}
+
+.wrk-cont .dots-cont {
+    position: absolute;
+    background: transparent;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    transition: 0.5s ease-in;
+}
+
+.wrk-cont .dots-cont .dot {
+    position: absolute;
+    width: 4px;
+    height: 4px;
+    background: rgba(255, 98, 0, 0.6);
+    border-radius: 50%;
+}
+
+.infs {
+    position: absolute;
+    color: rgb(255, 98, 0);
+    font-size: 12px;
+    padding: 10px;
+    display: flex;
+    width: 100%;
+}
+
+.infs p {
+    width: 20%;
+    padding: 10px;
+    text-transform: uppercase;
+    height: 80px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    position: relative;
+}
+
+.infs p span:last-child i,
+.infs p span {
+    font-size: 10px;
+    font-weight: 600;
+}
+
+.infs p::before {
+    content: '';
+    position: absolute;
+    width: 2px;
+    height: 50%;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    background: rgb(255, 98, 0);
+}
+
+.infs p span:last-child {
+    font-size: 35px;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.infs p span:last-child i {
+    position: absolute;
+}
+
+.goal img {
+    width: 100px;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
+.grass img {
+    width: 650px;
+    position: absolute;
+    bottom: 0;
+    height: 10px;
+}
+
+.ball img {
+    position: absolute;
+    width: 25px;
+    bottom: 0;
+    right: 360px;
+    transition: 0.1s ease-out all;
+}
+
+.ball img.rotate {
+    animation: rotation 2s infinite linear;
+}
+
+@keyframes rotation {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(359deg);
+    }
+}
+
+.ball img.stop {
+    animation: stop 2s infinite linear;
+}
+
+@keyframes stop {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(0deg);
+    }
+}
+
+.ins {
+    display: flex;
+    color: rgb(255, 98, 0);
+    padding-top: 10px;
+}
+
+.ins p {
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    text-transform: uppercase;
+    width: calc(100% / 4);
+    cursor: pointer;
+    transition: 0.5s ease-in-out;
+    border: none;
+}
+
+.ins p.active,
+.ins p:hover {
+    background: #ff6200;
+    color: #ffff;
+}
+
+.ins p span:first-child {
+    font-size: 35px;
+}
+
+.ins p span:last-child {
+    font-size: 11px;
+    font-weight: 600;
+}
+
+.ins p.start {
+    color: #ffff;
+    position: relative;
+    overflow: hidden;
+}
+
+
+.ins p.start::before {
+    content: '';
+    position: absolute;
+    width: 350px;
+    height: 350px;
+    background: rgba(255, 98, 0, 0.6);
+    z-index: -1;
+    left: 0;
+    top: 0;
+    border-top-left-radius: 50%;
+    transition: 0.5s ease-in-out all;
+    border: none;
+
+}
+
+.ins p.start:hover {
+    background: transparent;
+}
+
+.ins p.start:hover::before {
+    border-top-left-radius: 0%;
+    background: rgba(255, 98, 0, 1);
+}
+
+/* input */
+
+.ins-rgs input {
+    -webkit-appearance: none;
+    margin-right: 15px;
+    width: 100%;
+    height: 5px;
+    background: rgba(255, 98, 0, 0.2);
+    border-radius: 5px;
+    background-image: linear-gradient(#ff6200, rgb(255, 98, 0));
+    background-repeat: no-repeat;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+/* Input Thumb */
+.ins-rgs input::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    height: 16px;
+    width: 16px;
+    border-radius: 50%;
+    background: #ff6200;
+    cursor: pointer;
+    box-shadow: 0 0 2px 0 #555;
+    transition: background .3s ease-in-out;
+}
+
+/* Input Track */
+.ins-rgs input::-webkit-slider-runnable-track {
+    -webkit-appearance: none;
+    box-shadow: none;
+    border: none;
+    background: transparent;
+}
+
+.ins-rgs {
+    padding: 20px;
+    color: #ffff;
+    position: relative;
+    padding-top: 45px;
+}
+
+.inp-val {
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 10px;
+    pointer-events: none;
+    left: calc(30% - 4px);
+    padding: 5px;
+}
+
+.inp-val::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: #ff6200;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    transform: rotate(45deg);
+}
+
+.max-min-ranges {
+    position: absolute;
+    bottom: -20px;
+    width: 100%;
+    left: 0;
+    display: flex;
+    justify-content: space-between;
+    padding-left: 5px;
+    padding-right: 20px;
+    height: 40px;
+
+}
+
+.max-min-ranges span {
+    position: relative;
+    width: 50px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 10px;
+}
+
+.max-min-ranges span i {
+    font-size: 8px;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.reset-window {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    top: 0;
+    left: 0;
+    backdrop-filter: blur(15px);
+    display: none;
+}
+
+.reset-window.active {
+    display: block;
+}
+
+.res-msg {
+    position: absolute;
+    background: rgba(0, 0, 0, 0.7);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #ff6200;
+    width: 450px;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    padding: 20px;
+}
+
+.res-msg span.cls-msg-btn {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 10px;
+    cursor: pointer;
+    transition: 0.5s ease-in-out all;
+    overflow: hidden;
+}
+
+.res-msg span.cls-msg-btn:hover {
+    color: #ffff;
+    background: #ff6200;
+}
+
+.res-msg span.icn {
+    font-size: 100px;
+}
+
+.res-msg .res-btn {
+    font-size: 18px;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    padding: 10px;
+    position: relative;
+    cursor: pointer;
+    overflow: hidden;
+    transition: 0.5s ease-in-out all;
+    border: #ff6200 1px solid;
+    margin-top: 20px;
+
+}
+
+.res-msg .res-btn:hover {
+    color: #ffff;
+    border: #ff6200 1px transparent;
+}
+
+.res-msg .res-btn::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #ff6200;
+    left: -100%;
+    top: 0;
+    z-index: -1;
+    transition: 0.5s ease-in-out all;
+}
+
+.res-msg p:hover::before {
+    left: 0;
+}
+
+.res-msg p {
+    font-size: 18px;
+    text-transform: uppercase;
+}
